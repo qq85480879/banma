@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href="@{/frontdesk/orderadd/css/orderadd.css}" rel="stylesheet"/>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet" />
+    <script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+
+    <script th:src="@{/frontdesk/orderadd/js/orderadd.js}"></script>
+
+    <title>添加订单</title>
+</head>
+<body>
+<!--包含头部-->
+<div th:include="@{/frontdesk/head/head}"></div>
+<div class="warp">
+    <form name="form1" method="post">
+        <h3>添加订单</h3>
+        <div id="forminfo">
+            <div>
+                <span class="lf" style="vertical-align: middle;">收货地区：</span>
+                <form class="form-inline">
+                    <div data-toggle="distpicker">
+                        <div class="form-group" style="float:left">
+                            <label class="sr-only" for="province3">Province</label>
+                            <select class="form-control" id="province3" data-province="浙江省" style="width: auto"></select>
+                        </div>
+                        <div class="form-group" style="float:left">
+                            <label class="sr-only" for="city3">City</label>
+                            <select class="form-control" id="city3" data-city="杭州市" style="width: auto"></select>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="district3">District</label>
+                            <select class="form-control" id="district3" data-district="西湖区" style="width: auto"></select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <span class="lf" style="vertical-align: middle;">详细地址：</span>
+                <br/>
+                <textarea style="width: 422px;height: 35px" id="js-address"></textarea>
+            </div>
+
+            <div>
+                <span class="lf" style="vertical-align: middle;">收货人：</span>
+                <br/>
+                <input type="text" style="width: 422px;height: 35px" id="js-consignee"/>
+            </div>
+
+            <div>
+                <span class="lf" style="vertical-align: middle;">联系方式：</span>
+                <br/>
+                <input type="text" style="width: 422px;height: 35px" id="js-contact"/>
+            </div>
+
+
+            <br/> 支付方式：<input name="" type="radio" value="" checked="checked"/>&nbsp;在线支付
+        </div>
+        <table width="1200" height="80" border="1" cellpadding="0" cellspacing="0" bordercolor="#d8d8d8">
+            <tr>
+                <th width="276">商品图片</th>
+                <th width="247">商品名称</th>
+                <th width="231">商品单价</th>
+                <th width="214">购买数量</th>
+                <th width="232">总价</th>
+            </tr>
+            <tr>
+                <td>
+                    <img th:src="@{/frontdesk/prodlist/img/prod.jpg}" width="80px" height="80px"/>
+                </td>
+                <td>${ entry.key.name }</td>
+                <td>${ entry.key.price }元</td>
+                <td>${ entry.value }件</td>
+                <td>${ entry.key.price * entry.value }元</td>
+            </tr>
+            <tr>
+                <td>
+                    <img th:src="@{/frontdesk/prodlist/img/wpl.png}" width="80px" height="80px"/>
+                </td>
+                <td>${ entry.key.name }</td>
+                <td>${ entry.key.price }元</td>
+                <td>${ entry.value }件</td>
+                <td>${ entry.key.price * entry.value }元</td>
+            </tr>
+        </table>
+
+        <div class="Order_price">总价：${ totalMoney }元</div>
+        <div class="add_orderbox">
+
+            <input name="" type="button" value="增加订单" class="add_order_but" id="js-add"/>
+
+        </div>
+    </form>
+</div>
+<!--包含脚部-->
+<div th:include="@{/frontdesk/foot/foot}"></div>
+
+<script th:src="@{/js/distpicker.data.js}"></script>
+    <script th:src="@{/js/distpicker.js}"></script>
+    <script th:src="@{/js/main.js}"></script>
+
+</body>
+</html>

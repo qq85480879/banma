@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fnd.banma.mapper.RegistMapper">
+
+    <sql id="userColumns">
+        user_id as userId,
+        username,
+        nickname,
+        password,
+        card_id as cardId,
+        email,
+        gender,
+        user_status as userStatus,
+        login_times as loginTimes,
+        created_time as createdTime,
+        update_time as updateTime
+    </sql>
+    
+    <select id="query" resultType="com.fnd.banma.pojo.User">
+        select
+        <include refid="userColumns"></include>
+        from user
+    </select>
+
+    <insert id="regist" parameterType="com.fnd.banma.pojo.User">
+        insert into user
+        (
+          user_id,
+          username,
+          nickname,
+          password,
+          card_id,
+          email,
+          gender,
+          user_status,
+          login_times,
+          created_time,
+          update_time
+        )
+        values
+        (
+          #{userId,jdbcType=CHAR},
+          #{username,jdbcType=VARCHAR},
+          #{nickname,jdbcType=VARCHAR},
+          #{password,jdbcType=VARCHAR},
+          #{cardId,jdbcType=VARCHAR},
+          #{email,jdbcType=VARCHAR},
+          #{gender,jdbcType=INTEGER},
+          #{userStatus,jdbcType=INTEGER},
+          #{loginTimes,jdbcType=INTEGER},
+          #{createdTime,jdbcType=BIGINT},
+          #{updateTime,jdbcType=BIGINT}
+        )
+    </insert>
+
+
+    <select id="checkName" resultType="com.fnd.banma.pojo.User">
+        select
+        <include refid="userColumns"></include>
+        from user
+        where username = #{username}
+    </select>
+
+</mapper>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/frontdesk/regist/css/regist.css}" rel="stylesheet"/>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/frontdesk/head/js/head.js}"></script>
+    <script th:src="@{/frontdesk/regist/js/regist2.js}"></script>
+    <script th:src="@{/js/utils.js}"></script>
+    <title>欢迎注册BanMa</title>
+</head>
+<body>
+<a id="toIndex">&hearts;返回首页</a>
+<form action="#" method="POST">
+    <h1>欢迎注册BanMa</h1>
+    <table>
+        <tr>
+            <td>
+                <span th:text="${message}">333</span>
+            </td>
+        </tr>
+        <div class="form-group">
+            <input type="text" id="username" class="form-control" placeholder="请输入用户名" name="用户名"/><span id="username_msg"></span>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" class="form-control" placeholder="请输入密码" name="密码"/><span id="password_msg"></span>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password2" class="form-control" placeholder="请再次输入密码" name="确认密码"/><span id="password2_msg"></span>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" class="form-control" placeholder="请输入邮箱" name="邮箱"/><span id="email_msg"></span>
+        </div>
+        <tr>
+            <td class="sub_td" colspan="2">
+                <input type="submit" id="js-check" value="注册用户"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

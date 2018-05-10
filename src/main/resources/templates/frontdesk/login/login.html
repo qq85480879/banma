@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="context-path" th:content="@{/}"/>
+    <link th:href="@{/frontdesk/login/css/login.css}" rel="stylesheet"/>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/frontdesk/head/js/head.js}"></script>
+    <script th:src="@{/frontdesk/login/js/login.js}"></script>
+    <title>欢迎登录BanMa</title>
+</head>
+<body>
+<a id="toIndex">&hearts;返回首页</a>
+<h1>欢迎登陆BanMa</h1>
+<form action="#" method="POST">
+    <form class="m-t" role="form" action="" method="post">
+        <table>
+            <tr>
+                <span id="all_msg"></span>
+                <div class="form-group">
+                    <input type="text" id="username" class="form-control" placeholder="请输入用户名" name="用户名"/><span
+                        id="username_msg"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" class="form-control" placeholder="请输入密码" name="密码"/><span
+                        id="password_msg"></span>
+                </div>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="remname" value="true"/>记住用户名&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#" id="toRegist">前往注册</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center">
+                    <input type="submit" id="js-check" value="登 陆"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fnd.banma.mapper.UserMapper">
+
+    <select id="query" resultType="com.fnd.banma.pojo.User">
+      select
+      user_id as userId,
+      username,
+      nick_name as nickName,
+      password,
+      card_id as cardId,
+      email,
+      gender,
+      user_status as userStatus,
+      login_times as loginTimes,
+      created_time as createdTime,
+      update_time as updateTime
+      from user
+    </select>
+
+</mapper>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<div xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link th:href="@{/frontdesk/head/css/head.css}" rel="stylesheet"/>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/frontdesk/head/js/head2.js}"></script>
+
+<div id="common_head">
+    <div id="line1">
+        <div id="content">
+            <span th:if="${session.user != null}">
+                欢迎回来&nbsp;&hearts;&nbsp;<a th:text="${session.user.username}"></a>
+                <a id="toLogout">退出</a>
+            </span>
+            <span th:if="${session.user == null}">
+                <a href="#" id="toLogin">登录</a>&nbsp;&hearts;&nbsp;<a href="#" id="toRegist">注册</a>
+            </span>
+        </div>
+    </div>
+    <div id="line2">
+        <img id="logo" th:src="@{/frontdesk/head/img/logo.jpg}"/>
+        <input type="text" name=""/>
+        <input type="button" value="搜 索"/>
+        <span id="goto">
+			<a id="toOrderList"> 我的订单</a> &hearts;
+			<a id="toCart"> 我的购物车 </a>
+		</span>
+        <img id="erwm" th:src="@{/frontdesk/head/img/qr.jpg}"/>
+    </div>
+    <div id="line3">
+        <div id="content">
+            <ul>
+                <li><a id="toIndex">首页</a></li>
+                <li><a id="toProdList">全部商品</a></li>
+                <li><a id="toPhone">手机数码</a></li>
+                <li><a id="toOrderAdd">电脑平板</a></li>
+                <li><a id="#">家用电器</a></li>
+                <li><a href="#">汽车用品</a></li>
+                <li><a href="#">食品饮料</a></li>
+                <li><a href="#">图书杂志</a></li>
+                <li><a href="#">服装服饰</a></li>
+                <li><a href="#">理财产品</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>

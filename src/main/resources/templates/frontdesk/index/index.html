@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link th:href="@{/frontdesk/index/css/index.css}" rel="stylesheet"/>
+    <title>斑马的首页</title>
+</head>
+<body>
+<!--包含头部-->
+<div th:include="@{/frontdesk/head/head}"></div>
+<div id="index">
+    <div id="line1">
+        <img th:src="@{/frontdesk/index/img/banner_big.jpg}"/>
+    </div>
+    <div id="line2">
+        <img id="line2_1" th:src="@{/frontdesk/index/img/adv1.jpg}"/>
+        <img id="line2_2" th:src="@{/frontdesk/index/img/adv2.jpg}"/>
+        <img id="line2_3" th:src="@{/frontdesk/index/img/adv_l1.jpg}"/>
+    </div>
+    <div id="line3">
+        <img id="line3_1" th:src="@{/frontdesk/index/img/adv3.jpg}"/>
+        <img id="line3_2" th:src="@{/frontdesk/index/img/adv4.jpg}"/>
+        <div id="line3_right">
+            <img id="line3_3" th:src="@{/frontdesk/index/img/adv_l2.jpg}"/>
+            <img id="line3_4" th:src="@{/frontdesk/index/img/adv_l3.jpg}"/>
+        </div>
+    </div>
+    <div id="line4">
+        <img th:src="@{/frontdesk/index/img/217.jpg}"/>
+    </div>
+    <div id="line5">
+				<span id="line5_1">
+					<img th:src="@{/frontdesk/index/img/icon_g1.png}"/>&nbsp;&nbsp;500强企业 品质保证
+				</span>
+        <span id="line5_2">
+					<img th:src="@{/frontdesk/index/img/icon_g2.png}"/>&nbsp;&nbsp;7天退货 15天换货
+				</span>
+        <span id="line5_3">
+					<img th:src="@{/frontdesk/index/img/icon_g3.png}"/>&nbsp;&nbsp;100元起免运费
+				</span>
+        <span id="line5_4">
+					<img th:src="@{/frontdesk/index/img/icon_g4.png}"/>&nbsp;&nbsp;448家维修网点 全国联保
+				</span>
+    </div>
+</div>
+<!--包含脚部-->
+<div th:include="@{/frontdesk/foot/foot}"></div>
+</body>
+</html>

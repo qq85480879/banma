@@ -1,0 +1,27 @@
+server:
+  port: 8088
+  address: localhost
+  tomcat:
+    uri-encoding: UTF-8
+
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  type-aliases-package: com.fnd.banma.pojo
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/banma?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  application:
+    name: banma
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    #开发时关闭缓存 不然没法看实时页面
+    cache: false
+

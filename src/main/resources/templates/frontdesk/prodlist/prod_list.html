@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link th:href="@{/frontdesk/prodlist/css/prodList.css}" rel="stylesheet"/>
+	<script th:src="@{/frontdesk/prodlist/js/prodlist.js}"></script>
+</head>
+<body>
+<!--包含头部-->
+<div th:include="@{/frontdesk/head/head}"></div>
+	<div id="content">
+		<div id="search_div">
+			<form method="post" action="#">
+				<span class="input_span">商品名：<input type="text" name="name"/></span>
+				<span class="input_span">商品种类：<input type="text" name="category"/></span>
+				<span class="input_span">商品价格区间：<input type="text" name="minprice"/> - <input type="text" name="maxprice"/></span>
+				<input type="submit" value="查 询"/>
+			</form>
+		</div>
+		<div id="prod_content">
+
+			<div class="prod_div">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div class="prod_div">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div class="prod_div">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div class="prod_div">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div class="prod_div">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div class="prod_div">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div class="prod_div">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div class="prod_div">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div class="prod_div" style="margin-right: 0px;">
+				<img th:src="@{/frontdesk/prodlist/img/prod.jpg}"/>
+				<div id="prod_name_div">
+					华为荣耀6plus
+				</div>
+				<div id="prod_price_div">
+					￥2099元
+				</div>
+				<div>
+					<div id="gotocart_div">
+						<a href="#">加入购物车</a>
+					</div>
+					<div id="say_div">
+						133人评价
+					</div>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+	<table id="dg"></table>
+<div>
+	<br/>
+	<br/>
+	<br/>
+</div>
+<!--包含脚部-->
+<div th:include="@{/frontdesk/foot/foot}"></div>
+</body>
+</html>
